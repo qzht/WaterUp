@@ -288,5 +288,11 @@ namespace XK.NBear.DB
         /// <param name="parameters">ParameterCollection</param>
         /// <returns>DataTable</returns>
         DataTable Pager(string key, int pageSize, int pageIndex, string sql, out int count, string orderBy, ParameterCollection parameters);
+        /// <summary>
+        /// 批量插入
+        /// </summary>
+        /// <param name="sourceTab"></param>
+        /// <returns></returns>
+        bool InsertBlockData(DataTable sourceTab, string TableName);
     }
 }

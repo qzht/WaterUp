@@ -40,9 +40,9 @@ namespace CommonLib
                 }
                 strPath = strPath + "\\" + dt.ToString("dd") + ".txt";
 
-
+                string datetime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 StreamWriter FileWriter = new StreamWriter(strPath, true); //创建日志文件
-                FileWriter.WriteLine(strMatter);
+                FileWriter.WriteLine(datetime + "\r\n" + strMatter);
                 FileWriter.Close(); //关闭StreamWriter对象
             }
             catch (Exception ex)

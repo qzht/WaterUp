@@ -14,7 +14,7 @@ namespace XK.NBear.DB
     {
         private static readonly ParameterCache dbParameters = new ParameterCache();
         private readonly DbProviderFactory dbProviderFactory;
-        private readonly string connectionString;
+        public readonly string connectionString;
 
         #region Private methods
         /// <summary>
@@ -791,6 +791,11 @@ namespace XK.NBear.DB
 
 
         public virtual DataTable Pager2(string key, int pageSize, int pageIndex, string sql, out int count, string orderBy)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual bool InsertBlockData(DataTable sourceTab, string TableName)
         {
             throw new NotImplementedException();
         }

@@ -37,6 +37,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +64,36 @@
     <Compile Include="SetDatabase.Designer.cs">
       <DependentUpon>SetDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="SetIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetIP.Designer.cs">
+      <DependentUpon>SetIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetLine.Designer.cs">
+      <DependentUpon>SetLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetPhoneNum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetPhoneNum.Designer.cs">
+      <DependentUpon>SetPhoneNum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetSchool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetSchool.Designer.cs">
+      <DependentUpon>SetSchool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetTimecs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetTimecs.Designer.cs">
+      <DependentUpon>SetTimecs.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +110,21 @@
     <EmbeddedResource Include="SetDatabase.resx">
       <DependentUpon>SetDatabase.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SetIP.resx">
+      <DependentUpon>SetIP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetLine.resx">
+      <DependentUpon>SetLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetPhoneNum.resx">
+      <DependentUpon>SetPhoneNum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetSchool.resx">
+      <DependentUpon>SetSchool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetTimecs.resx">
+      <DependentUpon>SetTimecs.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -92,6 +140,10 @@
     <ProjectReference Include="..\CommonLib\CommonLib.csproj">
       <Project>{8FD36F68-D0CD-41A3-A9ED-A338D22F962E}</Project>
       <Name>CommonLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Contracts\Contracts.csproj">
+      <Project>{6E7C4D15-8A91-4E37-B925-07DEF3523A14}</Project>
+      <Name>Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\XK.NBear\XK.NBear.csproj">
       <Project>{DA6BC3B7-AE3A-4CC8-B1C9-9EB009D5B9B8}</Project>

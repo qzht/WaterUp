@@ -66,5 +66,31 @@ namespace XK.NBear.DB.SqlServer
             string limitsql = "select top " + pageSize + " " + sql.Substring(sql.ToLower().IndexOf("select") + 6) + "  and (" + key + " not in (select top " + pageSize * (pageIndex - 1) + " " + key + " " + sql.Substring(sql.ToLower().IndexOf("from")) + " order by " + orderBy + ")) order by " + orderBy + "";
             return this.ExecuteDataTable(limitsql);
         }
+
+        public override bool InsertBlockData(DataTable sourceTab, string TableName)
+        {
+            bool flag = false;
+            try
+            {
+
+                SqlBulkCopy _bulkCopy = new SqlBulkCopy(this.connectionString, SqlBulkCopyOptions.FireTriggers);
+                _bulkCopy.BulkCopyTimeout = 60000;
+                _bulkCopy.BatchSize = 5000;//5000次插提交一次
+                _bulkCopy.DestinationTableName = TableName;
+                _bulkCopy.WriteToServer(sourceTab);
+                flag = true;
+
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            finally
+            {
+
+            }
+            return flag;
+        }
     }
 }
