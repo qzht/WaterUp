@@ -220,8 +220,8 @@ namespace Client
         {
             try
             {
-                string user = "dlxinkao";
-                string pass = "YsrGj22D";
+                string user = "";
+                string pass = "";
 
                 string url = "http://cf.51welink.com/submitdata/service.asmx/g_Submit?sname=" + user + "&spwd=" + pass + "&scorpid=&sprdid=1012808&sdst=" + telNumber + "&smsg=";
 
